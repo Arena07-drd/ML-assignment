@@ -14,3 +14,21 @@ Classification/trashnet/dataset-resized/
 .DS_Store
 
 *.pt
+
+Classification/SVM/dataset-original
+Classification/SVM/requirements.txt
+
+Clustering/clustering/UCI HAR dataset
+
+Regression/regression/WECs_Dataset
+Regression/regression/requirements.txt
+Regression/regression/.dist
+Regression/regression/.clustering_pca_update
+Regression/regression/.clustering_stage
+Regression/regression/.notebook_deps
+Regression/regression/.svm_color_stage
+Regression/regression/.notebook_validation
+Regression/regression/.svm_grayscale_stage
+Regression/regression/.svm_rgb_pixels_stage
+Regression/regression/.svm_stage
+Regression/regression/.tmp_pdf_reader
