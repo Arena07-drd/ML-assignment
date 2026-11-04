@@ -1,0 +1,123 @@
+warning: `VIRTUAL_ENV=C:\Users\kaust\miniconda3` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead
+device: cuda NVIDIA GeForce RTX 4050 Laptop GPU
+sizes -> train/val/test: 1768 253 506
+epoch   1 | train loss 2.106 acc 0.288 | val loss 2.233 acc 0.403
+epoch   2 | train loss 1.712 acc 0.382 | val loss 1.749 acc 0.415
+epoch   3 | train loss 1.608 acc 0.416 | val loss 1.566 acc 0.474
+epoch   4 | train loss 1.544 acc 0.438 | val loss 1.555 acc 0.482
+epoch   5 | train loss 1.548 acc 0.460 | val loss 1.582 acc 0.510
+epoch   6 | train loss 1.484 acc 0.448 | val loss 1.428 acc 0.498
+epoch   7 | train loss 1.417 acc 0.494 | val loss 1.817 acc 0.478
+epoch   8 | train loss 1.455 acc 0.486 | val loss 1.437 acc 0.502
+epoch   9 | train loss 1.433 acc 0.510 | val loss 1.465 acc 0.530
+epoch  10 | train loss 1.391 acc 0.528 | val loss 1.453 acc 0.423
+epoch  11 | train loss 1.396 acc 0.516 | val loss 1.372 acc 0.565
+epoch  12 | train loss 1.403 acc 0.527 | val loss 1.538 acc 0.522
+epoch  13 | train loss 1.377 acc 0.528 | val loss 1.406 acc 0.549
+epoch  14 | train loss 1.350 acc 0.558 | val loss 1.375 acc 0.545
+epoch  15 | train loss 1.372 acc 0.561 | val loss 1.570 acc 0.561
+epoch  16 | train loss 1.358 acc 0.553 | val loss 1.511 acc 0.549
+epoch  17 | train loss 1.344 acc 0.560 | val loss 1.380 acc 0.593
+epoch  18 | train loss 1.321 acc 0.561 | val loss 1.385 acc 0.597
+epoch  19 | train loss 1.302 acc 0.582 | val loss 1.363 acc 0.565
+epoch  20 | train loss 1.318 acc 0.572 | val loss 1.342 acc 0.589
+epoch  21 | train loss 1.294 acc 0.588 | val loss 1.318 acc 0.625
+epoch  22 | train loss 1.292 acc 0.598 | val loss 1.306 acc 0.593
+epoch  23 | train loss 1.273 acc 0.607 | val loss 1.329 acc 0.632
+epoch  24 | train loss 1.275 acc 0.609 | val loss 1.371 acc 0.601
+epoch  25 | train loss 1.286 acc 0.598 | val loss 1.354 acc 0.581
+epoch  26 | train loss 1.242 acc 0.630 | val loss 1.311 acc 0.573
+epoch  27 | train loss 1.272 acc 0.597 | val loss 1.273 acc 0.625
+epoch  28 | train loss 1.249 acc 0.609 | val loss 1.450 acc 0.589
+epoch  29 | train loss 1.234 acc 0.622 | val loss 1.399 acc 0.597
+epoch  30 | train loss 1.269 acc 0.617 | val loss 1.268 acc 0.648
+epoch  31 | train loss 1.232 acc 0.633 | val loss 1.291 acc 0.652
+epoch  32 | train loss 1.224 acc 0.628 | val loss 1.569 acc 0.593
+epoch  33 | train loss 1.249 acc 0.626 | val loss 2.406 acc 0.462
+epoch  34 | train loss 1.229 acc 0.623 | val loss 1.278 acc 0.648
+epoch  35 | train loss 1.202 acc 0.650 | val loss 1.380 acc 0.589
+epoch  36 | train loss 1.205 acc 0.634 | val loss 1.272 acc 0.684
+epoch  37 | train loss 1.196 acc 0.658 | val loss 1.409 acc 0.617
+epoch  38 | train loss 1.191 acc 0.660 | val loss 1.257 acc 0.636
+epoch  39 | train loss 1.188 acc 0.656 | val loss 1.513 acc 0.605
+epoch  40 | train loss 1.188 acc 0.651 | val loss 1.297 acc 0.609
+epoch  41 | train loss 1.178 acc 0.666 | val loss 1.347 acc 0.573
+epoch  42 | train loss 1.158 acc 0.665 | val loss 1.560 acc 0.573
+epoch  43 | train loss 1.175 acc 0.662 | val loss 1.418 acc 0.585
+epoch  44 | train loss 1.150 acc 0.689 | val loss 1.293 acc 0.636
+epoch  45 | train loss 1.135 acc 0.683 | val loss 1.294 acc 0.664
+epoch  46 | train loss 1.138 acc 0.693 | val loss 1.259 acc 0.664
+epoch  47 | train loss 1.140 acc 0.683 | val loss 1.173 acc 0.696
+epoch  48 | train loss 1.128 acc 0.701 | val loss 1.219 acc 0.704
+epoch  49 | train loss 1.115 acc 0.697 | val loss 1.360 acc 0.609
+epoch  50 | train loss 1.116 acc 0.701 | val loss 1.306 acc 0.648
+epoch  51 | train loss 1.129 acc 0.682 | val loss 1.362 acc 0.605
+epoch  52 | train loss 1.111 acc 0.699 | val loss 1.221 acc 0.692
+epoch  53 | train loss 1.093 acc 0.697 | val loss 1.204 acc 0.696
+epoch  54 | train loss 1.110 acc 0.698 | val loss 1.205 acc 0.700
+epoch  55 | train loss 1.105 acc 0.700 | val loss 1.250 acc 0.664
+epoch  56 | train loss 1.071 acc 0.737 | val loss 1.382 acc 0.625
+epoch  57 | train loss 1.077 acc 0.712 | val loss 1.197 acc 0.704
+epoch  58 | train loss 1.081 acc 0.724 | val loss 1.245 acc 0.668
+epoch  59 | train loss 1.058 acc 0.729 | val loss 1.279 acc 0.696
+epoch  60 | train loss 1.075 acc 0.725 | val loss 1.239 acc 0.688
+epoch  61 | train loss 1.061 acc 0.727 | val loss 1.169 acc 0.719
+epoch  62 | train loss 1.045 acc 0.735 | val loss 1.168 acc 0.692
+epoch  63 | train loss 1.055 acc 0.729 | val loss 1.653 acc 0.648
+epoch  64 | train loss 1.051 acc 0.745 | val loss 1.219 acc 0.731
+epoch  65 | train loss 1.035 acc 0.749 | val loss 1.234 acc 0.723
+epoch  66 | train loss 1.008 acc 0.762 | val loss 1.233 acc 0.731
+epoch  67 | train loss 1.033 acc 0.757 | val loss 1.194 acc 0.704
+epoch  68 | train loss 1.022 acc 0.755 | val loss 1.140 acc 0.731
+epoch  69 | train loss 1.014 acc 0.754 | val loss 1.168 acc 0.747
+epoch  70 | train loss 1.002 acc 0.776 | val loss 1.210 acc 0.708
+epoch  71 | train loss 1.012 acc 0.756 | val loss 1.175 acc 0.731
+epoch  72 | train loss 0.984 acc 0.772 | val loss 1.215 acc 0.711
+epoch  73 | train loss 0.981 acc 0.774 | val loss 1.408 acc 0.676
+epoch  74 | train loss 1.009 acc 0.755 | val loss 1.105 acc 0.783
+epoch  75 | train loss 0.975 acc 0.781 | val loss 1.237 acc 0.692
+epoch  76 | train loss 0.971 acc 0.788 | val loss 1.165 acc 0.751
+epoch  77 | train loss 0.969 acc 0.783 | val loss 1.183 acc 0.735
+epoch  78 | train loss 0.950 acc 0.790 | val loss 1.198 acc 0.731
+epoch  79 | train loss 0.952 acc 0.797 | val loss 1.082 acc 0.759
+epoch  80 | train loss 0.957 acc 0.799 | val loss 1.101 acc 0.759
+epoch  81 | train loss 0.931 acc 0.803 | val loss 1.082 acc 0.779
+epoch  82 | train loss 0.937 acc 0.804 | val loss 1.126 acc 0.763
+epoch  83 | train loss 0.943 acc 0.800 | val loss 1.119 acc 0.763
+epoch  84 | train loss 0.947 acc 0.783 | val loss 1.130 acc 0.751
+epoch  85 | train loss 0.940 acc 0.798 | val loss 1.088 acc 0.775
+epoch  86 | train loss 0.921 acc 0.807 | val loss 1.089 acc 0.791
+epoch  87 | train loss 0.924 acc 0.814 | val loss 1.105 acc 0.763
+epoch  88 | train loss 0.919 acc 0.817 | val loss 1.093 acc 0.775
+epoch  89 | train loss 0.910 acc 0.821 | val loss 1.091 acc 0.779
+epoch  90 | train loss 0.915 acc 0.815 | val loss 1.090 acc 0.771
+epoch  91 | train loss 0.902 acc 0.819 | val loss 1.089 acc 0.779
+epoch  92 | train loss 0.907 acc 0.825 | val loss 1.090 acc 0.791
+epoch  93 | train loss 0.891 acc 0.825 | val loss 1.095 acc 0.783
+epoch  94 | train loss 0.897 acc 0.817 | val loss 1.079 acc 0.791
+epoch  95 | train loss 0.917 acc 0.814 | val loss 1.072 acc 0.787
+epoch  96 | train loss 0.904 acc 0.817 | val loss 1.075 acc 0.791
+epoch  97 | train loss 0.897 acc 0.818 | val loss 1.092 acc 0.798
+epoch  98 | train loss 0.896 acc 0.820 | val loss 1.085 acc 0.783
+epoch  99 | train loss 0.891 acc 0.829 | val loss 1.094 acc 0.798
+epoch 100 | train loss 0.889 acc 0.835 | val loss 1.079 acc 0.775
+training time: 163.5 min
+              precision    recall  f1-score   support
+
+   cardboard      0.912     0.901     0.907        81
+       glass      0.763     0.870     0.813       100
+       metal      0.841     0.707     0.768        82
+       paper      0.907     0.815     0.858       119
+     plastic      0.761     0.722     0.741        97
+       trash      0.477     0.778     0.592        27
+
+    accuracy                          0.802       506
+   macro avg      0.777     0.799     0.780       506
+weighted avg      0.818     0.802     0.806       506
+
+[[73  0  0  2  1  5]
+ [ 1 87  2  1  7  2]
+ [ 0  8 58  3  7  6]
+ [ 3  3  4 97  6  6]
+ [ 3 14  3  3 70  4]
+ [ 0  2  2  1  1 21]]

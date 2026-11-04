@@ -1,0 +1,26 @@
+warning: `VIRTUAL_ENV=C:\Users\kaust\miniconda3` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead
+raw features: (2527, 2304)
+PCA check vs sklearn: max |ratio diff| = 8.326672684688674e-17
+components needed for variance: {'80%': 28, '90%': 79, '95%': 167, '99%': 473}
+2 PCs keep 31.1% of variance, 3 PCs keep 40.6%; shapes (2527, 2), (2527, 3)
+
+| model | cv_acc | train_acc | test_acc | precision | recall | f1 | roc_auc | fit_s |
+|---|---|---|---|---|---|---|---|---|
+| DT (library) | 0.497 | 0.854 | 0.496 | 0.509 | 0.486 | 0.493 | 0.738 | 5.698 |
+| DT + PCA (library) | 0.456 | 0.532 | 0.447 | 0.359 | 0.387 | 0.369 | 0.730 | 15.941 |
+| KNN (library) | 0.517 | 0.999 | 0.520 | 0.521 | 0.521 | 0.512 | 0.712 | 0.010 |
+| KNN + PCA (library) | 0.581 | 0.999 | 0.581 | 0.578 | 0.555 | 0.561 | 0.845 | 7.089 |
+| DT (numpy) | 0.486 | 0.845 | 0.486 | 0.481 | 0.483 | 0.481 | 0.729 | 14.053 |
+| DT + PCA (numpy) | 0.456 | 0.532 | 0.447 | 0.359 | 0.387 | 0.369 | 0.730 | 3.132 |
+| KNN (numpy) | 0.517 | 0.999 | 0.524 | 0.526 | 0.524 | 0.516 | 0.714 | 0.001 |
+| KNN + PCA (numpy) | 0.581 | 0.999 | 0.581 | 0.578 | 0.555 | 0.561 | 0.846 | 3.092 |
+| ResNet-50 CNN (scratch) | 0.798 | 0.818 | 0.802 | 0.777 | 0.799 | 0.780 | 0.965 | nan |
+
+cv_acc = 5-fold CV accuracy on the train set (CNN: held-out validation accuracy); train_acc = accuracy on the training data (CNN: augmented batches at the best-val epoch).
+
+- DT: library vs NumPy test predictions agree on 85.6%
+- DT + PCA: library vs NumPy test predictions agree on 100.0%
+- KNN: library vs NumPy test predictions agree on 99.6%
+- KNN + PCA: library vs NumPy test predictions agree on 100.0%
+
+Best model by macro ROC-AUC: **ResNet-50 CNN (scratch)** (AUC 0.965)

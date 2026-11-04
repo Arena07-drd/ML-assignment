@@ -1,0 +1,125 @@
+===== DT (library) =====
+              precision    recall  f1-score   support
+
+   cardboard      0.562     0.617     0.588        81
+       glass      0.370     0.370     0.370       100
+       metal      0.441     0.500     0.469        82
+       paper      0.607     0.597     0.602       119
+     plastic      0.461     0.423     0.441        97
+       trash      0.611     0.407     0.489        27
+
+    accuracy                          0.496       506
+   macro avg      0.509     0.486     0.493       506
+weighted avg      0.498     0.496     0.495       506
+
+===== DT + PCA (library) =====
+              precision    recall  f1-score   support
+
+   cardboard      0.521     0.617     0.565        81
+       glass      0.323     0.320     0.322       100
+       metal      0.333     0.220     0.265        82
+       paper      0.522     0.588     0.553       119
+     plastic      0.455     0.577     0.509        97
+       trash      0.000     0.000     0.000        27
+
+    accuracy                          0.447       506
+   macro avg      0.359     0.387     0.369       506
+weighted avg      0.411     0.447     0.425       506
+
+===== KNN (library) =====
+              precision    recall  f1-score   support
+
+   cardboard      0.547     0.506     0.526        81
+       glass      0.413     0.450     0.431       100
+       metal      0.540     0.415     0.469        82
+       paper      0.741     0.529     0.618       119
+     plastic      0.471     0.670     0.553        97
+       trash      0.417     0.556     0.476        27
+
+    accuracy                          0.520       506
+   macro avg      0.521     0.521     0.512       506
+weighted avg      0.543     0.520     0.522       506
+
+===== KNN + PCA (library) =====
+              precision    recall  f1-score   support
+
+   cardboard      0.662     0.605     0.632        81
+       glass      0.470     0.470     0.470       100
+       metal      0.587     0.451     0.510        82
+       paper      0.696     0.672     0.684       119
+     plastic      0.526     0.722     0.609        97
+       trash      0.524     0.407     0.458        27
+
+    accuracy                          0.581       506
+   macro avg      0.578     0.555     0.561       506
+weighted avg      0.587     0.581     0.579       506
+
+===== DT (numpy) =====
+              precision    recall  f1-score   support
+
+   cardboard      0.538     0.617     0.575        81
+       glass      0.379     0.360     0.369       100
+       metal      0.460     0.488     0.473        82
+       paper      0.619     0.546     0.580       119
+     plastic      0.430     0.443     0.437        97
+       trash      0.462     0.444     0.453        27
+
+    accuracy                          0.486       506
+   macro avg      0.481     0.483     0.481       506
+weighted avg      0.488     0.486     0.486       506
+
+===== DT + PCA (numpy) =====
+              precision    recall  f1-score   support
+
+   cardboard      0.521     0.617     0.565        81
+       glass      0.323     0.320     0.322       100
+       metal      0.333     0.220     0.265        82
+       paper      0.522     0.588     0.553       119
+     plastic      0.455     0.577     0.509        97
+       trash      0.000     0.000     0.000        27
+
+    accuracy                          0.447       506
+   macro avg      0.359     0.387     0.369       506
+weighted avg      0.411     0.447     0.425       506
+
+===== KNN (numpy) =====
+              precision    recall  f1-score   support
+
+   cardboard      0.547     0.506     0.526        81
+       glass      0.423     0.470     0.445       100
+       metal      0.557     0.415     0.476        82
+       paper      0.741     0.529     0.618       119
+     plastic      0.471     0.670     0.553        97
+       trash      0.417     0.556     0.476        27
+
+    accuracy                          0.524       506
+   macro avg      0.526     0.524     0.516       506
+weighted avg      0.548     0.524     0.526       506
+
+===== KNN + PCA (numpy) =====
+              precision    recall  f1-score   support
+
+   cardboard      0.662     0.605     0.632        81
+       glass      0.470     0.470     0.470       100
+       metal      0.587     0.451     0.510        82
+       paper      0.696     0.672     0.684       119
+     plastic      0.526     0.722     0.609        97
+       trash      0.524     0.407     0.458        27
+
+    accuracy                          0.581       506
+   macro avg      0.578     0.555     0.561       506
+weighted avg      0.587     0.581     0.579       506
+
+===== ResNet-50 CNN (scratch) =====
+              precision    recall  f1-score   support
+
+   cardboard      0.912     0.901     0.907        81
+       glass      0.763     0.870     0.813       100
+       metal      0.841     0.707     0.768        82
+       paper      0.907     0.815     0.858       119
+     plastic      0.761     0.722     0.741        97
+       trash      0.477     0.778     0.592        27
+
+    accuracy                          0.802       506
+   macro avg      0.777     0.799     0.780       506
+weighted avg      0.818     0.802     0.806       506

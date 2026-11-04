@@ -12,3 +12,5 @@ wheels/
 # Datasets
 Classification/trashnet/dataset-resized/
 .DS_Store
+
+*.pt
