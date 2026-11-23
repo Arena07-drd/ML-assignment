@@ -17,6 +17,7 @@ Classification/trashnet/dataset-resized/
 
 Classification/SVM/dataset-original
 Classification/SVM/requirements.txt
+Classification/SVM/README.txt
 
 Clustering/clustering/UCI HAR dataset
 
