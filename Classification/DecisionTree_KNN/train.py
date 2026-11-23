@@ -1,11 +1,10 @@
-"""HOG features -> Decision Tree / KNN (library + NumPy, with and without PCA) + PCA analysis + report figures.
+"""Raw-pixel features -> Decision Tree / KNN (library + NumPy, with and without PCA) + PCA analysis + report figures.
 
 Run: uv run Classification/DecisionTree_KNN/train.py   (outputs go to Classification/results/)
 """
 import json
 import os
 import pickle
-import sys
 import time
 from pathlib import Path
 
@@ -16,7 +15,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from PIL import Image
-from skimage.feature import hog
 from sklearn.decomposition import PCA as SkPCA
 from sklearn.metrics import (ConfusionMatrixDisplay, classification_report, precision_recall_fscore_support,
                              roc_auc_score, roc_curve)
@@ -30,8 +28,7 @@ from scratch import PCA, KNN, DecisionTree
 HERE = Path(__file__).resolve().parent
 DATA = HERE.parent / "trashnet" / "dataset-resized"
 RESULTS = HERE.parent / "results"
-FEAT = sys.argv[1] if len(sys.argv) > 1 else "hog"  # "hog" or "raw" (raw pixels, no feature engineering)
-OUT = RESULTS / FEAT
+OUT = RESULTS / "raw"  # raw pixels as features
 SEED = 42
 N_JOBS = max(1, (os.cpu_count() or 2) // 2)
 CV = StratifiedKFold(5, shuffle=True, random_state=SEED)
@@ -47,18 +44,9 @@ GRIDS = {
 PCA_VARIANCE = [0.80, 0.90, 0.95]  # tuned too, for the "+PCA" variants
 
 
-def hog_features(path):
-    # 128x96 keeps the 4:3 aspect ratio; 16px cells -> 8x6 cells, 2x2 blocks -> 7x5 blocks x 36 = 1260 features
-    img = np.asarray(Image.open(path).convert("RGB").resize((128, 96)))
-    return hog(img, orientations=9, pixels_per_cell=(16, 16), cells_per_block=(2, 2), channel_axis=-1)
-
-
 def raw_features(path):
     # no feature engineering: 32x24 RGB pixels scaled to [0, 1] -> 2304 features
     return np.asarray(Image.open(path).convert("RGB").resize((32, 24)), dtype=float).ravel() / 255
-
-
-FEATURES = {"hog": hog_features, "raw": raw_features}
 
 
 def macro_roc(y, proba):
@@ -156,9 +144,9 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     classes = sorted(p.name for p in DATA.iterdir() if p.is_dir())
     files = [(f, i) for i, c in enumerate(classes) for f in sorted((DATA / c).glob("*.jpg"))]
-    X = np.array([FEATURES[FEAT](f) for f, _ in files])
+    X = np.array([raw_features(f) for f, _ in files])
     y = np.array([i for _, i in files])
-    print(f"{FEAT} features:", X.shape, flush=True)
+    print("features:", X.shape, flush=True)
 
     # 80/20 stratified; same seed/ordering as the ResNet split, so the test set is identical
     X_tr, X_te, y_tr, y_te = train_test_split(X, y, test_size=0.2, stratify=y, random_state=SEED)
@@ -264,13 +252,6 @@ def main():
     pca_analysis(X, y, classes)
     print("\n" + md_table(df.drop(columns="best_params")))
     print("\n".join(notes))
-
-    # with vs without HOG, once both runs exist
-    hog_csv, raw_csv = RESULTS / "hog" / "metrics.csv", RESULTS / "raw" / "metrics.csv"
-    if hog_csv.exists() and raw_csv.exists():
-        h, r = pd.read_csv(hog_csv).set_index("model"), pd.read_csv(raw_csv).set_index("model")
-        cmp = pd.DataFrame({"HOG acc": h.test_acc, "HOG AUC": h.roc_auc, "raw-pixel acc": r.test_acc, "raw-pixel AUC": r.roc_auc})
-        (RESULTS / "feature_comparison.md").write_text(md_table(cmp.reset_index()) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":  # required on Windows: joblib workers re-import this file

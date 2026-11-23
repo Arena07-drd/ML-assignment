@@ -1,7 +1,6 @@
 """ResNet-50 written by hand (He et al. 2015), no torchvision.models.
 
-Layer names (conv1, bn1, layer1..4, downsample, fc) match torchvision on purpose,
-so the ImageNet-pretrained weights can be loaded straight into this model.
+Layer names (conv1, bn1, layer1..4, downsample, fc) follow the torchvision naming convention.
 """
 import torch
 import torch.nn as nn

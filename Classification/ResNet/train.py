@@ -22,7 +22,7 @@ IMG = 224
 WORKERS = 1
 
 # ---------- preprocessing ----------
-# ImageNet mean/std: the pretrained weights expect inputs normalized this way
+# per-channel mean/std normalization
 normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 
 # train: random augmentation so the model sees a slightly different image every epoch
